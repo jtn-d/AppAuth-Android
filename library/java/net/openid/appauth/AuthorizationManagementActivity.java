@@ -186,7 +186,7 @@ public class AuthorizationManagementActivity extends Activity {
     public static Intent createResponseHandlingIntent(Context context, Uri responseUri) {
         Intent intent = createBaseIntent(context);
         intent.setData(responseUri);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
         return intent;
     }
 
