@@ -19,11 +19,15 @@
 
   <application>
     <activity android:name=".AuthorizationManagementActivity"
-      android:exported="false"
-      android:theme="@android:style/Theme.Translucent.NoTitleBar"
-      android:launchMode="singleTask" />
+              android:exported="false"
+              android:theme="@android:style/Theme.Translucent.NoTitleBar"
+              android:launchMode="singleTask"
+              android:taskAffinity=""
+              android:excludeFromRecents="true"/>
 
-    <activity android:name=".RedirectUriReceiverActivity" android:exported="true">
+    <activity android:name=".RedirectUriReceiverActivity" 
+              android:exported="true"
+              android:excludeFromRecents="true">
       <intent-filter>
         <action android:name="android.intent.action.VIEW"/>
         <category android:name="android.intent.category.DEFAULT"/>
